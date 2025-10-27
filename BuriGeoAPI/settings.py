@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'api',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -89,6 +90,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Custom user permissions
 
 REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
     'DEFAULT_PERMISSION_CLASSES': [
         'api.permissions.IsSuperUserOrReadOnly',
     ]
