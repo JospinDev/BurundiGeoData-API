@@ -1,21 +1,38 @@
-dossiers/
+# === Django & Python ===
 *.pyc
+*.pyo
 *.pyd
-*.sqlite3*
-*.map
-
-.vscode
-.directory
-.env
-
-**__pycache__
-
-/media
-/venv
-env/
-
-/staticfiles
-**migrations
+__pycache__/
+*/__pycache__/
 *.db
+*.sqlite3*
 *.log
 *.csv
+*.map
+
+# === Virtual environments ===
+venv/
+env/
+jospin/
+
+# === Django folders ===
+/media/
+/static/
+/staticfiles/
+/dossiers/
+
+# === Migrations (optional: keep if you want version control) ===
+**/migrations/
+!**/migrations/__init__.py
+
+# === Environment & configuration ===
+.env
+.directory
+
+# === Editors & IDEs ===
+.vscode/
+.idea/
+
+# === OS system files ===
+.DS_Store
+Thumbs.db
